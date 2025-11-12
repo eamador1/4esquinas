@@ -1,9 +1,12 @@
 import React from "react";
+import Layout from "../components/layout";
 
 export default function Contactenos() {
     return (
-  <div>
-    <h1> Contactenos</h1>
-  </div>
+      <Layout>
+        <div>
+          <h1> Contactenos</h1>
+        </div>
+      </Layout>
     )
 }

@@ -1,10 +1,12 @@
 import * as React from "react"
-import Navbar from "../components/Navbar"
+import Layout from "../components/layout"
 
 export default function Home() {
   return (
-  <section>
-    <Navbar />
-  </section>
+    <Layout>
+      <section>
+   
+      </section>
+    </Layout>
   )
 }

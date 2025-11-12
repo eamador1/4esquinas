@@ -1,8 +1,11 @@
 import React from "react";
+import Layout from "../components/layout";
 
 export default function Servicios(){
   return(
-    <div>Nuestros Servicios</div>
+    <Layout>
+    <h1>Nuestros Servicios</h1>
+    </Layout>
   )
 }
 
