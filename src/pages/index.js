@@ -1,14 +1,17 @@
 import * as React from "react"
 import Layout from "../components/Layout"
-import hero from '../assets/vista frente.jpg';
+import * as styles from '../Styles/index.module.css';
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Home() {
   return (
     <Layout>
       <section>
-        <img className="hero" src={hero} alt="Hero"/>
-   
+        <div className={styles.heroCont}>
+          <StaticImage className={styles.hero} src="../assets/vista frente.jpg" alt="Hero"/>
+        </div>
       </section>
     </Layout>
   )
 }
+
