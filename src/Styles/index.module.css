@@ -9,3 +9,10 @@
   height: 100%;
   object-fit: cover;
 }
+
+.principios {
+  padding: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
