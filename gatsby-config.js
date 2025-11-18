@@ -25,6 +25,19 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // The unique name for each instance
+        name: `principios`,
+        // Path to the directory
+        path: `${__dirname}/src/principios/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
+    },
   ],
 }
 
