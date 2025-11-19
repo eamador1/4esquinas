@@ -1,0 +1,11 @@
+.details {
+    display: flex;
+}
+
+.feature {
+    width: 20%;
+}
+
+.info {
+    display: flex;
+}
