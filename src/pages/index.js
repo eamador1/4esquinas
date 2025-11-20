@@ -1,14 +1,23 @@
-import { graphql, Link } from "gatsby";
 import * as React from "react"
+import {useState}  from "react";
+import { graphql} from "gatsby";
 import Layout from "../components/Layout"
 import * as styles from '../Styles/index.module.css';
 import { StaticImage } from "gatsby-plugin-image";
-//import Img from 'gatsby-image'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Modal from "../components/Modal"
 
 
 export default function Home({ data }) {
-  const principios = data.allMarkdownRemark.nodes;
+  const [openItem, setOpenItem] = useState(null)
+  const principios = data.allMarkdownRemark.nodes
+  
+  const handleOpen = (item) => {
+      setOpenItem({ slug: item.frontmatter.slug,
+                    title: item.frontmatter.title,
+                    featuredImg: item.frontmatter.featuredImg,
+                    html: item.html });
+    }
 
   return (
     <Layout>
@@ -22,25 +31,33 @@ export default function Home({ data }) {
         </div>
 
         <div className={styles.principios}>
-          {principios.map(item => {
-            const image = getImage(item.frontmatter.imagen);
+          {principios.map((item) => {
+  if (!item || !item.frontmatter) return null; // safeguard
+
+  const image = getImage(item.frontmatter.imagen);
 
             return (
-              <Link
-                to={`/principios/${item.frontmatter.slug}`}
-                key={item.id}
+              <div 
+                key={item.id} 
+                className={styles.principios}
+                onClick={() => handleOpen(item)}
+                onKeyDown={(e) => e.key === "Enter" && handleOpen(item.frontmatter.slug)}
+                role="button"
+                tabIndex="0"
               >
-                <div>
-                  <GatsbyImage
-                    image={image}
-                    alt={item.frontmatter.title}
-                  />
-                  <h3>{item.frontmatter.title}</h3>
-                </div>
-              </Link>
+                <GatsbyImage image={image} alt={item.frontmatter.title} />
+               
+              </div>
             );
           })}
         </div>
+        {openItem && (
+          <Modal 
+          featuredImg={openItem.featuredImg}
+          title={openItem.title} 
+          contentHtml={openItem.html}
+          onClose={() => setOpenItem(null)} />
+        )}
       </section>
     </Layout>
   );
@@ -51,14 +68,18 @@ export const query = graphql`
     allMarkdownRemark {
       nodes {
         id
+        html
         frontmatter {
           slug
           title
           imagen {
             childImageSharp {
-              gatsbyImageData(
-                placeholder: BLURRED
-              )
+              gatsbyImageData
+            }
+          }
+          featuredImg {
+            childImageSharp {
+              gatsbyImageData
             }
           }
         }
