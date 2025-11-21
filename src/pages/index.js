@@ -1,11 +1,11 @@
-import * as React from "react"
-import {useState}  from "react";
+import React, {useState}  from "react"
 import { graphql} from "gatsby";
 import Layout from "../components/Layout"
 import * as styles from '../Styles/index.module.css';
 import { StaticImage } from "gatsby-plugin-image";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Modal from "../components/Modal"
+import Video from "../components/LatestVideo"
 
 
 export default function Home({ data }) {
@@ -30,13 +30,14 @@ export default function Home({ data }) {
           />
         </div>
 
-        <div className={styles.principios}>
+        <div className={styles.contPrincipios}>
           {principios.map((item) => {
   if (!item || !item.frontmatter) return null; // safeguard
 
   const image = getImage(item.frontmatter.imagen);
 
             return (
+              
               <div 
                 key={item.id} 
                 className={styles.principios}
@@ -48,9 +49,11 @@ export default function Home({ data }) {
                 <GatsbyImage image={image} alt={item.frontmatter.title} />
                
               </div>
+              
             );
           })}
         </div>
+    
         {openItem && (
           <Modal 
           featuredImg={openItem.featuredImg}
@@ -58,6 +61,18 @@ export default function Home({ data }) {
           contentHtml={openItem.html}
           onClose={() => setOpenItem(null)} />
         )}
+
+       
+  
+    <div>
+      <h1>Prédica Reciente</h1>
+      
+      <Video
+        videoSrcURL="https://www.facebook.com/reel/1833170947592003"
+        videoTitle="El caracter de un Critiano Parte I"
+      />
+    </div>
+
       </section>
     </Layout>
   );
