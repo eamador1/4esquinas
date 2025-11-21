@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
-import '../Styles/global.css'
+import * as styles from '../Styles/global.module.css'
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Layout({children}) {
   return (
@@ -11,7 +12,15 @@ export default function Layout({children}) {
 
         </div>
       <footer>
-        <p>Iglesia Apostólica de la Fe en Cristo Jesús. Nicaragua. 2025.</p>
+        <div className={styles.logoCont}>
+          <StaticImage
+            className={styles.logo}
+            src="../assets/iafcj.jpeg"
+            alt="Logo"
+          />
+          <p>Iglesia Apostólica de la Fe en Cristo Jesús. Nicaragua. 2025.</p>
+        </div>
+        
             
         </footer>
     </div>
