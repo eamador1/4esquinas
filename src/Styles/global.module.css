@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background: gainsboro;
+    background-repeat: no-repeat;
+}
+
+p {
+    margin: 16px auto;
+    line-height: 1.5em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #082567;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 1000;
+    
+    
+}
+
+
+nav a {
+   
+    margin-left: 10vw;
+    font-weight: 400;
+    padding-bottom: 8px;
+    border-bottom: 3px solid transparent;
+   
+}
+
+nav a:hover {
+    border-color: white;
+}
+
+footer {
+    text-align: center;
+    background-color: #000033;
+    
+    height: 30vh;
+}
+
+.logo {
+    display: flex;
+    background-image: url(../assets/iafcj.jpeg);
+}
+
+.logoCont {
+    display: flex;
+}
