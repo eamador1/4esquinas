@@ -10,6 +10,7 @@
 
 html, body {
     min-height: 100%;
+    width: 100%;
 }
 
 body {
@@ -36,17 +37,16 @@ nav {
 }
 
 
-nav a {
-   
+nav a {  
     margin-left: 10vw;
     font-weight: 400;
     padding-bottom: 8px;
-    border-bottom: 3px solid transparent;
-   
+    border-bottom: 3px solid transparent;  
 }
 
 nav a:hover {
     border-color: white;
+    font-weight: 600;
 }
 
 footer {
