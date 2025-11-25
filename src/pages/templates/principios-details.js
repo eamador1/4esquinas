@@ -8,7 +8,7 @@ export default function PrincipiosDetails({ pageContext }) {
   return (
     <div className={styles.details}>
       <div className={styles.feature}>
-        {featuredImg && <GatsbyImage image={featuredImg} alt={title} />}
+        {featuredImg && <GatsbyImage className={styles.featuredImg} image={featuredImg} alt={title} />}
       </div>
 
       <div

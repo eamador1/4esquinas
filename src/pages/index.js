@@ -29,8 +29,12 @@ export default function Home({ data }) {
             alt="Hero"
           />
         </div>
+         <div className={styles.principiosHeader}>
+            <h3>Nuestros Principios</h3>
+          </div>
 
         <div className={styles.contPrincipios}>
+         
           {principios.map((item) => {
   if (!item || !item.frontmatter) return null; // safeguard
 
@@ -66,12 +70,13 @@ export default function Home({ data }) {
   
     <div>
       <h1>Prédica Reciente</h1>
-      
-      <Video
-        videoSrcURL="https://www.facebook.com/reel/1833170947592003"
-        videoTitle="El caracter de un Critiano Parte I"
-      />
-    </div>
+        <div className={styles.videoCont}>
+          <Video
+            videoSrcURL="https://www.facebook.com/reel/1833170947592003"
+            videoTitle="El caracter de un Critiano Parte I"
+          />
+        </div>
+      </div>
 
       </section>
     </Layout>
