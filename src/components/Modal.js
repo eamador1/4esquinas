@@ -12,10 +12,9 @@ export default function Modal({ slug, contentHtml, title, featuredImg, onClose }
     onKeyDown={(e) => e.key === "Enter" && onClose()}
     >
       <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
-        <button onClick={onClose} className={styles.cerrar}>CERRAR</button>
-        {featuredImg && <GatsbyImage image={getImage(featuredImg) } className={styles.featuredImg} alt={title} />}
-        <h2>{title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        {featuredImg && <GatsbyImage image={getImage(featuredImg) } className={styles.featuredImg} alt={title} />}     
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} className={styles.modalInfo} />
+        <button onClick={onClose} className={styles.cerrar}>X</button>
       
     </div>
     </div>
