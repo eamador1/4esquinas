@@ -11,7 +11,7 @@ export default function Video({ videoSrcURL, videoTitle }) {
         title={videoTitle}
         src={embedURL}
         width="500"
-        height="700"
+        height="900"
         style={{ border: "none", overflow: "hidden" }}
         scrolling="no"
         frameBorder="0"
