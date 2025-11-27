@@ -36,6 +36,7 @@
   transition: 1s ease;
   padding: 0 4% 0 4%;
   width:80%;
+  cursor: pointer;
 }
 
 .principios:hover {
@@ -44,10 +45,51 @@
   transition: 1s ease;
 }
 
+.videoArea {
+  border-radius: 20px;
+  background-color: rgb(242, 242, 242);
+  width: 92%;
+  padding: 4vh 0 10vh 0;
+  margin-left: 4%;
+}
+
 .videoCont {
   display: flex;
   justify-content: center;
   background-color: black;
   padding: 0 0 0 0;
-  margin: 0 20% 50vh 20%;
+  margin: 0 20% 0vh 20%;
 }
+
+.tituloPredica, .fechaPredica, .descripcionPredica  {
+  color: black;
+  padding-left: 5%;
+}
+
+.serviciosWrapper{
+  display: grid;
+  grid-template-rows: auto;
+
+}
+
+.serviciosWrapper div {
+  display: flex;
+  width: 20%;
+  height: 25vh;
+  border-radius: 25px;
+  background: white;
+  margin: 0 0 10% 10%;
+  font-weight: 800;
+  color: rgb(25, 25, 112);
+}
+
+.libroCont {
+  background: white;
+  width: 100%;
+}
+
+.libro {
+  color: black;
+  size: 100%;
+}
+

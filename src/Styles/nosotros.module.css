@@ -1,0 +1,8 @@
+.somosCont p {
+  width: 90%;
+  color: black;
+}
+
+.somosCont p:first-of-type {
+    padding-top: 10vh;
+}
