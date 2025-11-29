@@ -80,24 +80,65 @@ export default function Home({ data }) {
           />
         </div>
       </div>
-
       </section>
+
       <section className={styles.serviciosSection}>
-        <h3>Nuestros Servicios</h3>
-        <p>Únete a nosotros a adorar a nuetro Señor Jesucristo durante la semana</p>
+        <h3>Nuestras Reuniones</h3>
+        <p>Únete a nosotros a adorar a nuestro Señor Jesucristo durante la semana</p>
+        <div>
         <div className={styles.serviciosWrapper}>
-        <div>CULTO DE ORACIÓN
-        <div className={styles.libroCont}>
-          <StaticImage
-            className={styles.libro}
+          <div>
+          <h3>CULTO DE</h3> <h3>ORACIÓN</h3>
+            <div className={styles.infoCont}>
+            <StaticImage
+            className={styles.info}
+            src="../assets/orar.png"
+            alt="libro"
+            />
+            
+            </div>
+            <p>Martes 6:00pm</p>
+          </div>
+        </div>
+        <div className={styles.serviciosWrapper}>
+          <div>
+          <h3>CULTO DE</h3> <h3>FRATERNIDADES</h3>
+            <div className={styles.infoCont}>
+            <StaticImage
+            className={styles.info}
+            src="../assets/apreton-de-manos.svg"
+            alt="orar"
+            />
+            </div>
+            <p>Jueves 6:00 pm</p>
+          </div>
+        </div>
+        <div className={styles.serviciosWrapper}>
+          <div>
+          <h3>ESCUELA BÍBLICA</h3>
+            <div className={styles.infoCont}>
+            <StaticImage
+            className={styles.info}
             src="../assets/libro-alt.svg"
             alt="libro"
-          />
+            />
+            </div>
+            <p>Domingos 10:00 am</p>
+          </div>
         </div>
+        <div className={styles.serviciosWrapper}>
+          <div>
+          <h3>CULTO</h3> <h3>EVANGELÍSTICO</h3>
+            <div className={styles.infoCont}>
+            <StaticImage
+            className={styles.info}
+            src="../assets/usuarios-alt.svg"
+            alt="usuarios"
+            />
+            </div>
+            <p>Domingos 11:15 am</p>
+          </div>
         </div>
-        <div>CULTO DE FRATERNIDADES</div>
-        <div>ESCUELA BÍBLICA</div>
-        <div>CULTO EVANGELÍSTICO</div>
         </div>
       </section>
     </Layout>

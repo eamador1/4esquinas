@@ -66,30 +66,70 @@
   padding-left: 5%;
 }
 
-.serviciosWrapper{
-  display: grid;
-  grid-template-rows: auto;
+.serviciosSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 20vh 0 20vh 0;
+  margin: 0 0 0 4%;
+}
+.serviciosSection h3 {
+  color: black;
+  font-size: 2em;
+}
 
+.serviciosSection p {
+  color: black;
+  font-size: 1em;
+}
+
+.serviciosSection div {
+  display: flex;
+}
+
+.serviciosWrapper {
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  border: 1px gray solid;
+  background: white;
+  width: 25%;
+  height: 35vh;
+  background-repeat: no-repeat;
+  margin: 5vh 0 0 2%;
 }
 
 .serviciosWrapper div {
   display: flex;
-  width: 20%;
-  height: 25vh;
-  border-radius: 25px;
-  background: white;
-  margin: 0 0 10% 10%;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 2vh 0 0 0;
   font-weight: 800;
   color: rgb(25, 25, 112);
 }
 
-.libroCont {
-  background: white;
-  width: 100%;
+.serviciosWrapper h3 {
+  color: rgb(25, 25, 112);
+  font-size: 1em;
 }
 
-.libro {
-  color: black;
-  size: 100%;
+.infoCont {
+  width: 25% !important;
+  height: auto !important;
+  padding: 2% 5% 5% 5%;
+  background: #AFDBF5;
+}
+.info {
+  width: 20%;
+  height: auto;
+  
 }
 
+.serviciosWrapper:nth-of-type(3) > div > p {
+  margin-top: 12%;
+} 
+.serviciosWrapper:nth-of-type(3) > .info {
+  padding-top: 10%;
+}
